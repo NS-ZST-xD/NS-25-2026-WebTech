@@ -1,3 +1,21 @@
+.container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card{
+  padding: 20px;
+  box-shadow: 0 4px 8px;
+  width: 60%;
+  margin: 20px;
+  border-radius: 20px;
+}
+
+.card p{
+  background-color: aquamarine;
+}
+
 button{
   width: 25%;
   margin: auto;

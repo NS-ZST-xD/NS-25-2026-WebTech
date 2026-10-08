@@ -19,10 +19,11 @@ function App() {
     <div className="container">
       {technologies.map((card) => (
         <div className="card" key={card.id}>
+          <p>{card.category}</p>
           <img src={"/images/"+card.image} alt={card.name} />
           <h3>{card.name}</h3>
-          <h3>{card.category}</h3>
-          <h3>{card.hours}</h3>
+          
+          <h3>{card.hours} godzin</h3>
         </div>
       ))}
     </div>
