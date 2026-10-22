@@ -17,17 +17,22 @@ const technologies = [
 function App() {
   return (
     <div className="container">
-      {technologies.map((card) => (
-        <div className="card" key={card.id}>
-          <p>{card.category}</p>
-          <img src={"/images/"+card.image} alt={card.name} />
-          <h3>{card.name}</h3>
-          
-          <h3>{card.hours} godzin</h3>
+      <main className="main-content">
+        <h2>Dostępne technologie</h2>
+        <div className="technology-grid">
+          {technologies.map((technology) => (
+            <Technology
+              key={technology.id}
+              name={technology.name}
+              category={technology.category}
+              hours={technology.hours}
+              image={technology.image}
+            />
+          ))}
         </div>
-      ))}
+      </main>
     </div>
   );
 }
 
-export default App
+export default App;

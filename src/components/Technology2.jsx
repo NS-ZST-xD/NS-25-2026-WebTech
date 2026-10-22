@@ -8,6 +8,12 @@ function Technology2(props) {
       <button onClick={() => props.onSelect(props.name)}>
         Wybierz
       </button>
+
+      <p>Polubienia: {likes}</p>
+        <button onClick={() => setLikes(likes + 1)}>
+          Lubię
+        </button>
+
     </section>
   );
 }

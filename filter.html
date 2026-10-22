@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filter</title>
+</head>
+
+<body>
+    <script>
+        const numbers = [4, 11, 18, 7, 25, 10];
+
+        const products = [
+            {id: 1, name: "Laptop", category: "Komputery", price: 3500},
+            {id: 2, name: "Mysz", category: "Akcesoria", price: 80},
+            {id: 3, name: "Klawiatura", category: "Akcesoria", price: 200},
+            {id: 4, name: "Monitor", category: "Monitory", price: 900}
+        ];
+
+
+        const greaterThanTen = numbers.filter((num) => num > 10);
+
+
+        const lessOrEqualTen = numbers.filter((num) => num <= 10);
+
+
+        const evenNumbers = numbers.filter((num) => num % 2 === 0);
+
+        //zad 1
+        console.log("Tablica źródłowa:", numbers);
+        console.log("Większe od 10:", greaterThanTen);
+        console.log("Mniejsze lub równe 10:", lessOrEqualTen);
+        console.log("Parzyste:", evenNumbers);
+
+
+        //zad 2
+        const computers = products.filter((p) => p.category === "Komputery");
+        console.log("Komputery:", computers);
+
+        const cheapProducts = products.filter((p) => p.price <= 200);
+        console.log("Cena <= 200 zł:", cheapProducts);
+
+        const phones = products.filter((p) => p.category === "Telefony");
+        console.log("Telefony:", phones);
+        console.log("Liczba znalezionych telefonów (length):", phones.length);
+    </script>
+</body>
+
+</html>
